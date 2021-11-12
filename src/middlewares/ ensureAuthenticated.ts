@@ -24,7 +24,7 @@ export function ensureAuthenticated(
   try {
 
     const { sub } = verify(token, process.env.JWT_SECRET) as IPayload
-    request.user_id = sub
+    //request.user_id = sub
 
     return next()
   } catch(err) {
